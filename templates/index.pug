@@ -9,11 +9,8 @@ html(lang="en")
         title Aman Chat
     body 
         .ct
+            span#noMsg Message will shown here.
             .msgContainer#msgCont 
-                .message.left 
-                    | Hello Aman, How are you?
-                .message.right 
-                    | I am Goo! What about you? 
             .typingArea 
                 input(type="text", id="input", placeholder="Message...")
                 button(id="send", onclick="send()") SEND

@@ -10,12 +10,13 @@ body{
 }
 
 .msgContainer{
-    /* background: red; */
-    min-height: 85.3vh;
-    max-height: 85.3vh;
-    /* margin-top: 5em; */
+    min-height: 100px;
+    max-height: 70vh;
     overflow-y: auto;
     overflow-x: hidden;
+    width: 100%;
+    padding-top: 2rem;
+    margin-top: 5rem;
 }
 
 .message{
@@ -44,6 +45,9 @@ body{
 
 .typingArea{
     height: 6.5rem;
+    width: 100%;
+    position: absolute;
+    top: 85vh;
 }
 
 #input{
@@ -64,4 +68,12 @@ body{
 .ct{
     display: flex;
     flex-direction: column;
+}
+
+#noMsg{
+    position: absolute;
+    height: 66%;
+    padding-top: 5rem;
+    transform: translate(50%, 50%);
+    font-weight: bold;
 }
