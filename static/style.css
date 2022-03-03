@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.msgContainer{
+    /* background: red; */
+    min-height: 85.3vh;
+    max-height: 85.3vh;
+    /* margin-top: 5em; */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.message{
+    color: black;
+    padding: .6rem;
+    margin: .6rem .2rem;
+    clear: both;
+    max-width: calc(100% - 60px);
+    /* line-break: calc(20rem - 200px); */
+    width: fit-content;
+}
+
+.left{
+    background: white;
+    float: left;
+    border-radius: 0 30px 30px 30px;
+    /* padding-right: calc(100% - 22.5rem); */
+}
+
+.right{
+    background: rgb(150, 223, 114);
+    float: right;
+    border-radius: 28px 0px 28px 28px;
+    /* padding-left: calc(100% - 22.5rem); */
+}
+
+.typingArea{
+    height: 6.5rem;
+}
+
+#input{
+    font-size: 1rem;
+    height: 60%;
+    padding-left: .5rem;
+    width: 75%;
+    outline: none;
+}
+
+#send{
+    font-size: 1rem;
+    height: 60%;
+    width: 25%;
+    outline: none;
+}
+
+.ct{
+    display: flex;
+    flex-direction: column;
+}

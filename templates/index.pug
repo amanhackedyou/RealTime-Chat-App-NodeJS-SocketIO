@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src="/socket.io/socket.io.js") 
+        link(rel="stylesheet", href="/static/style.css")
+        title Aman Chat
+    body 
+        .ct
+            .msgContainer#msgCont 
+                .message.left 
+                    | Hello Aman, How are you?
+                .message.right 
+                    | I am Goo! What about you? 
+            .typingArea 
+                input(type="text", id="input", placeholder="Message...")
+                button(id="send", onclick="send()") SEND
+
+
+
+    script(src="/static/client.js") 
