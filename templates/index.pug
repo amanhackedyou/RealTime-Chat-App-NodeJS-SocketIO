@@ -1,20 +1,44 @@
+//- doctype html
+//- html(lang="en")
+//-     head
+//-         meta(charset="UTF-8")
+//-         meta(http-equiv="X-UA-Compatible", content="IE=edge")
+//-         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-         script(src="/socket.io/socket.io.js") 
+//-         link(rel="stylesheet", href="/static/style.css")
+//-         title Aman Chat
+//-     body 
+//-         .ct
+//-             span#noMsg Message will shown here.
+//-             .msgContainer#msgCont 
+//-             .typingArea 
+//-                 input(type="text", id="input", placeholder="Message...")
+//-                 button(id="send", onclick="send()") SEND
+
+
+
+//-     script(src="/static/client.js") 
+
+
+
 doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        script(src="/socket.io/socket.io.js") 
-        link(rel="stylesheet", href="/static/style.css")
-        title Aman Chat
-    body 
-        .ct
-            span#noMsg Message will shown here.
-            .msgContainer#msgCont 
-            .typingArea 
-                input(type="text", id="input", placeholder="Message...")
-                button(id="send", onclick="send()") SEND
-
-
-
-    script(src="/static/client.js") 
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=Edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Aman Chat
+  script(src="/socket.io/socket.io.js") 
+  link(rel="stylesheet", href="/static/style.css")
+.container
+  .msgContainer#msgContainer
+    //
+      <div class="message outgoing">
+      Hii Bro, How are you man?
+      </div>
+      <div class="message incomming">
+      I am good man, What about you? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quidem incidunt quisquam veniam, ipsa, tempore tenetur atque, officia suscipit corporis minima neque assumenda magnam. Temporibus quae esse nesciunt iste iusto.
+      </div>
+  .typingArea#typingArea
+    textarea#input(placeholder='Message...')
+    button.send#send(onclick='send()') SEND
+    script(src='/static/client.js')

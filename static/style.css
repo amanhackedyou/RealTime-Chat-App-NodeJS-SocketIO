@@ -2,78 +2,100 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
+  }
+  
+  body{
     background: rgba(0, 0, 0, 0.9);
     color: white;
-}
-
-.msgContainer{
-    min-height: 100px;
-    max-height: 70vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 100%;
-    padding-top: 2rem;
-    margin-top: 5rem;
-}
-
-.message{
-    color: black;
-    padding: .6rem;
-    margin: .6rem .2rem;
-    clear: both;
-    max-width: calc(100% - 60px);
-    /* line-break: calc(20rem - 200px); */
-    width: fit-content;
-}
-
-.left{
-    background: white;
-    float: left;
-    border-radius: 0 30px 30px 30px;
-    /* padding-right: calc(100% - 22.5rem); */
-}
-
-.right{
-    background: rgb(150, 223, 114);
-    float: right;
-    border-radius: 28px 0px 28px 28px;
-    /* padding-left: calc(100% - 22.5rem); */
-}
-
-.typingArea{
-    height: 6.5rem;
-    width: 100%;
-    position: absolute;
-    top: 85vh;
-}
-
-#input{
-    font-size: 1rem;
-    height: 60%;
-    padding-left: .5rem;
-    width: 75%;
-    outline: none;
-}
-
-#send{
-    font-size: 1rem;
-    height: 60%;
-    width: 25%;
-    outline: none;
-}
-
-.ct{
+  }
+  
+  .container{
     display: flex;
     flex-direction: column;
-}
-
-#noMsg{
-    position: absolute;
-    height: 66%;
-    padding-top: 5rem;
-    transform: translate(50%, 50%);
+    /* background: red; */
+    max-height: 93vh;
+    min-height: 93vh;
+  }
+  
+  .msgContainer{
+    display: flex;
+    flex-direction: column;
+    /* background: blue; */
+    padding: .4rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    transition: all 1s;
+    scroll-behavior: smooth;
+    min-height: 80vh;
+  }
+  
+  .message{
+     padding: .5rem;
+     font-size: 1.1rem;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     max-width: 80vw;
+  }
+  
+  .incomming{
+    background: #fff;
+    color: rgba(0, 0, 0, 0.9);
+    margin-right: auto;
+    margin-top: 1rem;
+    border-radius: 0 30px 30px 30px;
+  }
+  
+  .outgoing{
+    margin-bottom: 1rem;
+    border-radius: 30px 30px 0 30px;
+    margin-left: auto;
+    background: rgb(255, 0, 255);
+    padding-left: 1rem;
+  }
+  
+  .typingArea{
+    /* background: rgb(225, 0, 255); */
+    display: flex;
+    margin-top: auto;
+  }
+  
+  #input{
+    padding: 1rem .3rem;
+    width: 80%;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    color: white;
+    background: transparent;
+    outline: none;
+    border-top: 2px solid rgb(255, 0, 255);
+    border-left: 2px solid rgb(255, 0, 255);
+    border-bottom: 2px solid rgb(255, 0, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0px 0px 15px 0px rgb(255, 0, 255);
+    transition: all 1s;
+  }
+  
+  #input::placeholder{
+    color: white;
+    outline: none;
+  }
+  
+  #input:focus{
+    box-shadow: 0px 0px 30px 0px rgb(255, 0, 255);
+  }
+  
+  .send{
+    width: 20%;
+    border-radius: 8px;
+    border: 2px solid rgb(255, 0, 255);
+    background: transparent;
+    color: white;
     font-weight: bold;
-}
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px rgb(255, 0, 255);
+    transition: all 1s;
+  }
+  
+  .send:active{
+    box-shadow: 0px 0px 30px 0px rgb(255, 0, 255);
+  }
